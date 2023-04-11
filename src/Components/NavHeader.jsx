@@ -10,9 +10,9 @@ const NavHeader = () => {
     <Container fluid className='p-3'>
       <Row>
         <Col className='d-flex justify-content-between align-items-center'>
-          <div className='d-flex gap-2 align-items-center'>
-            <ArrowLeft className='cursor-pointer' />
-            <h2 className='m-0' style={{fontWeight: 600}}>Header Title</h2>
+          <div className='d-flex gap-3 align-items-center'>
+            <ArrowLeft strokeWidth={3.5} className='cursor-pointer' />
+            <h1 className='m-0' style={{fontWeight: 600}}>Header Title</h1>
           </div>
         </Col>
       </Row>
