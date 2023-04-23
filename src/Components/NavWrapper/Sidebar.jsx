@@ -1,6 +1,6 @@
 import { Circle } from 'react-feather'
-import startLogo from '../assets/Images/Logos/x_white_logo.png'
-import centerLogo from '../assets/Images/Logos/xircls_white_text.svg'
+import startLogo from '../../assets/Images/Logos/x_white_logo.png'
+import centerLogo from '../../assets/Images/Logos/xircls_white_text.svg'
 
 const Sidebar = ({ navCheck, setNavCheck, setNavHover, navHover, navWidth }) => {
 
