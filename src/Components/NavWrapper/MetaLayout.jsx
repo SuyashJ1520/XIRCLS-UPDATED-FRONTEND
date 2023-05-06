@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Sidebar from './Sidebar'
 import NavHeader from './NavHeader'
 
 const MetaLayout = ({children}) => {
 
-    const [navCheck, setNavCheck] = useState(false)
-    const [navHover, setNavHover] = useState(false)
-    const [navWidth, setNavWidth] = useState(90)
-
-    useEffect(() => {
-        const width = (navCheck || navHover) ? '20%' : '5%'
-        setNavWidth(width)
-    }, [navCheck, navHover])
+    const [openNav, setOpenNav] = useState(false)
 
     return (
         <div className="position-relative">
-            <Sidebar navWidth={navWidth} setNavWidth={setNavWidth} navCheck={navCheck} setNavCheck={setNavCheck} navHover={navHover} setNavHover={setNavHover} />
-            <div className='transition-smooth' style={{ marginLeft: 'auto', width: navCheck ? `calc(80%)` : `calc(95%)` }}>
+            <Sidebar setOpenNav={setOpenNav} />
+            <div className='transition-smooth' style={{ marginLeft: 'auto', width: openNav ? `calc(80%)` : `calc(95%)` }}>
                 <NavHeader />
                 <div className="px-3">{children}</div>
             </div>
